@@ -1,4 +1,9 @@
 #!/usr/bin/env node
-console.log("Welcome to the Brain Games!")
-import { question } from '../src/cli.js'
-question()
+import { getName } from '../src/cli.js'
+function startGame() {
+    console.log("Welcome to the Brain Games!")
+    getName()
+}
+startGame()
+
+
