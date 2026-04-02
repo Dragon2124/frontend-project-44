@@ -1,6 +1,11 @@
 #!/usr/bin/env node
-import { even } from '../src/game.js'
-function game() {
-    even() 
+import { getName } from '../src/cli.js'
+import { question } from '../src/functions.js'
+
+function app() {
+  console.log('Welcome to the Brain Games!')
+
+  question(getName())
 }
-game()
+
+app()
