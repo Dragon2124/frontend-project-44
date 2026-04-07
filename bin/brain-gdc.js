@@ -1,10 +1,10 @@
 import { getName } from '../src/cli.js'
-import { gcd } from '../src/functions.js'
+import { gdc } from '../src/functions.js'
 
 function app() {
     console.log('Welcome to the Brain Games!')
 
-    gcd(getName())
+    gdc(getName())
 }
 
 app()
