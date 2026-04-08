@@ -1,6 +1,7 @@
-import readlineSync from 'readline-sync'
+import checkAnswer from '../functions.js'
 export const prime = (name) => {
     console.log('Answer "yes" if given number is prime. Otherwise answer "no".')
+
     for (let i = 0; i < 3; i++) {
         let number = Math.floor(Math.random() * (101 - 0) + 0)
         let correctAnswer = 'yes'
@@ -11,25 +12,16 @@ export const prime = (name) => {
             }
             else if (number % 2 !== 0 && number >= 3) {
                 const sqrt = Math.floor(Math.sqrt(number))
-                let i = 3
-                while (3 <= i && i < sqrt) {
-                    if (number % i === 0) {
+                for (let j = 3; j <= sqrt; j += 2) {
+                    if (number % j === 0) {
                         correctAnswer = 'no'
-                        break
                     }
-                    else i += 2
                 }
             }
         }
 
-        console.log(`Question: ${number}`)
-        const answer = readlineSync.question(`Your answer: `)
-        if (answer === correctAnswer) {
-            console.log('Correct!')
-        }
-        else return console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'. \nLet's try again, ${name}!`)
-        if (i === 2) {
-            console.log(`Congratulations, ${name}!`)
+        if (checkAnswer(number, correctAnswer, i, name) === false) {
+            return
         }
     }
 }
