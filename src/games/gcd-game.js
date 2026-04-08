@@ -9,9 +9,9 @@ export const gcd = (name) => {
     let correctAnswer
     if (secondNumber !== 0) {
       while (secondNumber !== 0) {
-        let saveNumber = secondNumber
+        let save = secondNumber
         secondNumber = firstNumber % secondNumber
-        firstNumber = saveNumber
+        firstNumber = save
       }
       correctAnswer = firstNumber
     }
