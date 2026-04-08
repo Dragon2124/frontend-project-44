@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import { getName } from '../src/cli.js'
 import { progression } from '../src/games/progression-game.js'
 

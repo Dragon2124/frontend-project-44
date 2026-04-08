@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import { getName } from '../src/cli.js'
 import { prime } from '../src/games/prime-game.js'
 function app() {
