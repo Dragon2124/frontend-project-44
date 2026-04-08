@@ -23,7 +23,7 @@ export const calculate = (name) => {
             console.log('Correct!')
         } else return console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'. \nLet's try again, ${name}!`)
         if (i === 2) {
-            console.log(`Congratulations, ${name}!`)
+            console.log(`Congratulations, ${name}`)
         }
     }
 }
