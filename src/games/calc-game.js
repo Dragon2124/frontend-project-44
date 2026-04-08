@@ -9,9 +9,11 @@ export const calculate = (name) => {
         let correctAnswer
         if (randomOperations === '+') {
             correctAnswer = firstNumber + secondNumber
-        } else if (randomOperations === '-') {
+        } 
+        else if (randomOperations === '-') {
             correctAnswer = firstNumber - secondNumber
-        } else if (randomOperations === '*') {
+        } 
+        else if (randomOperations === '*') {
             correctAnswer = firstNumber * secondNumber
         }
         if (checkAnswer(`${firstNumber} ${randomOperations} ${secondNumber}`, String(correctAnswer), i, name) === false) {
