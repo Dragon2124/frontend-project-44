@@ -2,7 +2,7 @@ import readlineSync from 'readline-sync'
 export const prime = (name) => {
     console.log('Answer "yes" if given number is prime. Otherwise answer "no".')
     for (let i = 0; i < 3; i++) {
-        let number = Math.floor(Math.random() * (101 - 0) + 0)
+        let number = Math.floor(Math.random() * (101 - 0) + 0) // NOSONAR
         let correctAnswer
 
         if (number !== 2) {

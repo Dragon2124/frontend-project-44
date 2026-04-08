@@ -3,8 +3,8 @@ export const gcd = (name) => {
     console.log("Find the greatest common divisor of given numbers.")
     for (let i = 0; i < 3; i++) {
 
-        let firstNumber = Math.floor(Math.random() * (100 - 1) + 1)
-        let secondNumber = Math.floor(Math.random() * (100 - 1) + 1)
+        let firstNumber = Math.floor(Math.random() * (100 - 1) + 1) // NOSONAR
+        let secondNumber = Math.floor(Math.random() * (100 - 1) + 1) // NOSONAR
 
         console.log(`Question: ${firstNumber} ${secondNumber}`)
 

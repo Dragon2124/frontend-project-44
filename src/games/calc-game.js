@@ -5,8 +5,8 @@ export const calculate = (name) => {
 
     let operations = ['+', '-', '*']
     for (let i = 0; i < 3; i++) {
-        let firstNumber = Math.floor(Math.random() * (100 - 1) + 1)
-        let secondNumber = Math.floor(Math.random() * (100 - 1) + 1)
+        let firstNumber = Math.floor(Math.random() * (100 - 1) + 1) // NOSONAR
+        let secondNumber = Math.floor(Math.random() * (100 - 1) + 1) // NOSONAR
         let randomOperations = operations[Math.floor(Math.random() * operations.length)]
         let correctAnswer
         if (randomOperations === '+') {
