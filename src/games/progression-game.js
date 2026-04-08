@@ -19,7 +19,7 @@ export const progression = (name) => {
             index += step
         }
         correctAnswer = arr[hiddenItem]
-        arr[hiddenItem] = '..'
+        arr[hiddenItem] = '...'
 
         console.log(`Question: ${arr.join(' ')}`)
         const answer = readlineSync.question('Your answer:')
