@@ -11,6 +11,6 @@ export default function checkAnswer(question, correctAnswer, i, name) {
         return false
     }
     if (i === 2) {
-        console.log(`Congratulations, ${name}`)
+        console.log(`Congratulations, ${name}!`)
     }
 }
