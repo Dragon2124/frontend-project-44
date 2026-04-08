@@ -1,5 +1,4 @@
 import readlineSync from 'readline-sync'
-
 export default function checkAnswer(question, correctAnswer, i, name) {
     console.log(`Question: ${question}`)
     const answer = readlineSync.question('Your answer:')
