@@ -1,5 +1,4 @@
 import readlineSync from 'readline-sync'
-import checkAnswer from '../functions.js'
 export const calculate = (name) => {
 
     console.log('What is the result of the expression?')
