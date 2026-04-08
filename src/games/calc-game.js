@@ -19,7 +19,6 @@ export const calculate = (name) => {
         }
 
         console.log(`Question: ${firstNumber} ${randomOperations} ${secondNumber}`)
-
         const answer = readlineSync.question('Your answer:')
         if (Number(answer) === correctAnswer) {
             console.log('Correct!')

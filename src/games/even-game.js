@@ -6,7 +6,7 @@ export const question = (name) => {
     for (let i = 0; i < 3; i++) {
 
         let number = Math.floor(Math.random() * (100 - 1) + 1)
-        let correctAnswer = 'yes'
+        let correctAnswer
 
         if (number % 2 === 0) {
             correctAnswer = 'yes'

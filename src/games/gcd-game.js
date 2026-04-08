@@ -8,7 +8,7 @@ export const gcd = (name) => {
 
         console.log(`Question: ${firstNumber} ${secondNumber}`)
 
-        let correctAnswer = firstNumber
+        let correctAnswer
 
         if (secondNumber !== 0) {
             while (secondNumber !== 0) {

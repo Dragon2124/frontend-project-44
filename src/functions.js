@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync'
-export default function checkAnswer(name, correctAnswer) {
+export default function checkAnswer(name, correctAnswer, i) {
     const answer = readlineSync.question('Your answer:')
     if (Number(answer) === correctAnswer) {
         console.log('Correct!')

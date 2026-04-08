@@ -3,7 +3,7 @@ export const prime = (name) => {
     console.log('Answer "yes" if given number is prime. Otherwise answer "no".')
     for (let i = 0; i < 3; i++) {
         let number = Math.floor(Math.random() * (101 - 0) + 0)
-        let correctAnswer = 'yes'
+        let correctAnswer
 
         if (number !== 2) {
             if (number < 2 || number % 2 === 0) {
