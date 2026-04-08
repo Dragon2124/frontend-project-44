@@ -5,4 +5,3 @@ function app() {
   getName()
 }
 app()
-
