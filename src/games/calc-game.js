@@ -14,7 +14,7 @@ export const calculate = (name) => {
         } else if (randomOperations === '*') {
             correctAnswer = firstNumber * secondNumber
         }
-        if (checkAnswer(`${secondNumber} ${randomOperations} ${secondNumber}`, String(correctAnswer), i, name) === false) {
+        if (checkAnswer(`${firstNumber} ${randomOperations} ${secondNumber}`, String(correctAnswer), i, name) === false) {
             return
         }
     }
