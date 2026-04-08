@@ -1,8 +1,6 @@
 import checkAnswer from '../functions.js'
 export const calculate = (name) => {
-
     console.log('What is the result of the expression?')
-
     let operations = ['+', '-', '*']
     for (let i = 0; i < 3; i++) {
         let firstNumber = Math.floor(Math.random() * (100 - 1) + 1) // NOSONAR
