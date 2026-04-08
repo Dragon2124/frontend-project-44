@@ -1,4 +1,4 @@
-import readlineSync from 'readline-sync'
+import checkAnswer from '../functions'
 export const question = (name) => {
 
     console.log('Answer "yes" if the number is even, otherwise answer "no".')
@@ -11,17 +11,9 @@ export const question = (name) => {
         if (number % 2 === 0) {
             correctAnswer = 'yes'
         }
-
         else correctAnswer = 'no'
-
-        console.log(`Question: ${number}`)
-
-        const answer = readlineSync.question('Your answer: ')
-
-        if (answer === correctAnswer) {
-            console.log('Correct!')
+        if (checkAnswer(number, correctAnswer, i, name) === false) {
+            return
         }
-        else return console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'. \nLet's try again, ${name}!`)
-        if (i === 2) { console.log(`Congratulations, ${name}!`) }
     }
 }

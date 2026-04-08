@@ -1,4 +1,4 @@
-import readlineSync from 'readline-sync'
+import checkAnswer from '../functions.js'
 export const progression = (name) => {
     console.log('What number is missing in the progression?')
     let correctAnswer
@@ -21,13 +21,8 @@ export const progression = (name) => {
         correctAnswer = arr[hiddenItem]
         arr[hiddenItem] = '..'
 
-        console.log(`Question: ${arr.join(' ')}`)
-        const answer = readlineSync.question('Your answer:')
-        if (Number(answer) === correctAnswer) {
-            console.log('Correct!')
-        } else return console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'. \nLet's try again, ${name}!`)
-        if (i === 2) {
-            console.log(`Congratulations, ${name}!`)
+        if (checkAnswer(`${arr.join(' ')}`, String(correctAnswer), i, name) === false) {
+            return
         }
     }
 }

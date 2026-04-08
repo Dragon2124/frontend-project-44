@@ -1,4 +1,4 @@
-import readlineSync from 'readline-sync'
+import checkAnswer from '../functions'
 export const gcd = (name) => {
     console.log("Find the greatest common divisor of given numbers.")
     for (let i = 0; i < 3; i++) {
@@ -18,12 +18,8 @@ export const gcd = (name) => {
             }
             correctAnswer = firstNumber
         }
-        const answer = readlineSync.question('Your answer:')
-        if (Number(answer) === correctAnswer) {
-            console.log('Correct!')
-        } else return console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'. \nLet's try again, ${name}!`)
-        if (i === 2) {
-            console.log(`Congratulations, ${name}!`)
+        if (checkAnswer(`${saveFNum} ${saveSNum}`, String(correctAnswer), i, name) === false) {
+            return
         }
     }
 }

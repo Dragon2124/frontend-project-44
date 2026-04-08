@@ -1,4 +1,4 @@
-import readlineSync from 'readline-sync'
+import checkAnswer from '../functions'
 export const calculate = (name) => {
 
     console.log('What is the result of the expression?')
@@ -16,14 +16,8 @@ export const calculate = (name) => {
         } else if (randomOperations === '*') {
             correctAnswer = firstNumber * secondNumber
         }
-
-        console.log(`Question: ${firstNumber} ${randomOperations} ${secondNumber}`)
-        const answer = readlineSync.question('Your answer:')
-        if (Number(answer) === correctAnswer) {
-            console.log('Correct!')
-        } else return console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'. \nLet's try again, ${name}!`)
-        if (i === 2) {
-            console.log(`Congratulations, ${name}!`)
+        if (checkAnswer(`${firstNumber} ${randomOperations} ${secondNumber}`, String(correctAnswer), i, name) === false) {
+            return
         }
     }
 }
