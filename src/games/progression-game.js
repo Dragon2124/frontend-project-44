@@ -1,23 +1,25 @@
 import checkAnswer from '../functions.js'
+
 export const progression = (name) => {
   console.log('What number is missing in the progression?')
-  let correctAnswer
-  for (let i = 0; i < 3; i++) {
-    let start = Math.floor(Math.random() * 11) // NOSONAR
-    let index = Math.floor(Math.random() * (6 - 1) + 1) // NOSONAR
-    let step = Math.floor(Math.random() * (6 - 1) + 1) // NOSONAR
-    let length = Math.floor(Math.random() * (11 - 5) + 5) // NOSONAR
-    let hiddenItem = Math.floor(Math.random() * (length - 0) + 0) // NOSONAR
-    const arr = []
-    for (let j = 0; j < length; j++) {
-      let curElement = start + index * step
-      arr.push(curElement)
-      index += step
-    }
-    correctAnswer = arr[hiddenItem]
-    arr[hiddenItem] = '..'
 
-    if (checkAnswer(`${arr.join(' ')}`, String(correctAnswer), i, name) === false) {
+  for (let i = 0; i < 3; i += 1) {
+    const start = Math.floor(Math.random() * 20)
+    const step = Math.floor(Math.random() * 10) + 1
+    const length = Math.floor(Math.random() * 6) + 5
+    const hiddenIndex = Math.floor(Math.random() * length)
+
+    const progressionArray = []
+    for (let j = 0; j < length; j += 1) {
+      progressionArray.push(start + j * step)
+    }
+
+    const correctAnswer = progressionArray[hiddenIndex]
+    progressionArray[hiddenIndex] = '..'
+
+    const question = progressionArray.join(' ')
+
+    if (checkAnswer(question, String(correctAnswer), i, name) === false) {
       return
     }
   }
